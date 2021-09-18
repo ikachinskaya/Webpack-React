@@ -1,14 +1,10 @@
-const TextBlock = require("./TextBlock");
+const Ul = require("./Ul");
 
 const root = document.getElementById("root");
 
-const reactElem = React.createElement(TextBlock, {
-  articleTitle: "Зaголовок",
-  firstPar: "lorem ipsum",
-  headingLevel: 4,
+const element = React.createElement(Ul, {
+  className: "text",
+  text: "Lorem ipsum",
 });
 
-const reactElem1 = React.createElement(TextBlock);
-
-ReactDOM.render(reactElem, root);
-//ReactDOM.render(reactElem1, root);
+ReactDOM.render(element, root);

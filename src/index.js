@@ -1,10 +1,31 @@
-const Ul = require("./Ul");
+//старый синтаксис, на Реакте не подходит
+//const pow = require("./MyMath");
+//console.log(pow(10, 3));
 
-const root = document.getElementById("root");
+//===================================================
+//импорт значения по умолчанию
+//новый синтаксис для импорта, вместо require
+//импорт по умолчанию, только 1 раз
+//import pow from './MyMath';
+//console.log(pow(10, 3));
 
-const element = React.createElement(Ul, {
-  className: "text",
-  text: "Lorem ipsum",
-});
+//===================================================
 
-ReactDOM.render(element, root);
+//импорт объекта
+//import MyMath from "./MyMath";
+//console.log(MyMath.pow(10, 3));
+//===================================================
+
+//именованный импорт
+//импорт объекта, который экспортировали сразу при объявлении функции
+import { pow, sum } from "./MyMath";
+console.log(pow(10, 3));
+console.log(sum(10, 3));
+//===================================================
+
+//импорт сразу всего
+import MyMath, * as NonDefaultImports from "./MyMath";
+console.log(MyMath);
+console.log(NonDefaultImports);
+
+//===================================================
